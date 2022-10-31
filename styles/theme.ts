@@ -4,7 +4,7 @@ export const darkTheme: DefaultTheme = {
   color: {
     black: '#000',
     white: '#fff',
-    main: '#3EFFFF',
+    main: '#7ac294',
   },
 };
 

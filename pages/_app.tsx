@@ -25,7 +25,8 @@ const ThemeToggleButton = styled.div<{ isDark: boolean }>`
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-  const handleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
+  const isDarkTheme = theme === 'dark';
+  const handleTheme = () => setTheme(isDarkTheme ? 'light' : 'dark');
 
   return (
     <>
@@ -35,9 +36,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <GlobalStyle />
-      <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
-        <ThemeToggleButton onClick={handleTheme} isDark={theme === 'dark'}>
-          {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+        <ThemeToggleButton onClick={handleTheme} isDark={isDarkTheme}>
+          {isDarkTheme ? 'LIGHT MODE' : 'DARK MODE'}
         </ThemeToggleButton>
         <Component {...pageProps} />
       </ThemeProvider>

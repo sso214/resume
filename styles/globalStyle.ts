@@ -13,9 +13,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 10px;
     -webkit-text-size-adjust: none;
-    font-family: Montserrat;
     font-display: fallback;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -26,6 +26,22 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
       margin: 0;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+      transition: color .2s ease-in-out;
+    }
+
+    span {
+      font-weight: bold;
+      display: inline-block;
+      background: #eee;
+      border-radius: 2px;
+      padding: 1px 10px 3px;
+      font-size: 12px;
+      margin: 0 5px 20px 0
     }
   }
 `;
