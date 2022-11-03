@@ -1,6 +1,7 @@
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
-import Title from '../../components/Title';
+import Mark from '../../components/Mark';
+import { Title } from '../../components/Title';
 
 const Education = () => {
   const { education } = useData();
@@ -12,7 +13,7 @@ const Education = () => {
       <Title heading='h3'>
         {name} {major}
       </Title>
-      <span>{period}</span>
+      <Mark>{period}</Mark>
       <p>{description}</p>
     </Container>
   );

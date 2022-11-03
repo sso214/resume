@@ -10,16 +10,19 @@ interface Props {
 
 const TAG_STYLE = {
   h1: css`
-    font-size: 40px;
-    line-height: 1.4;
     margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.4;
   `,
   h2: css`
-    font-size: 35px;
-    line-height: 1.5;
-    margin-bottom: 30px;
     position: relative;
+    margin-bottom: 30px;
     padding-left: 20px;
+
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.5;
 
     &:before {
       content: '';
@@ -33,26 +36,25 @@ const TAG_STYLE = {
     }
   `,
   h3: css`
-    font-size: 25px;
     margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 500;
   `,
   h4: css`
-    font-size: 18px;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
   `,
 };
 
-const StyledTitle = styled.p<{ heading: HeadingTags }>`
+export const StyledTitle = styled.p<{ heading: HeadingTags }>`
   ${(props) => TAG_STYLE[props.heading]};
 `;
 
-const Title: React.FC<Props> = ({ heading, children }) => {
+export const Title: React.FC<Props> = ({ heading, children }) => {
   return (
     <StyledTitle as={heading} heading={heading}>
       {children}
     </StyledTitle>
   );
 };
-
-export default Title;

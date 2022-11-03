@@ -38,8 +38,8 @@ const Home: NextPage = () => {
         <WorkExperience />
         <Education />
         <Skills />
-        <Footer />
       </ContentsContainer>
+      <Footer />
     </Container>
   );
 };

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
-import Title from '../../components/Title';
+import { Title } from '../../components/Title';
 
 const StyledItem = styled.li`
   margin-bottom: 10px;

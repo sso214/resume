@@ -5,7 +5,7 @@ interface Props {
   children?: ReactNode;
 }
 
-const StyledList = styled.ul`
+export const StyledList = styled.ul`
   li li {
     position: relative;
     padding-left: 15px;
@@ -25,8 +25,6 @@ const StyledList = styled.ul`
   }
 `;
 
-const List: React.FC<Props> = ({ children }) => {
+export const List: React.FC<Props> = ({ children }) => {
   return <StyledList>{children}</StyledList>;
 };
-
-export default List;

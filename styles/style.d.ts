@@ -6,6 +6,8 @@ declare module 'styled-components' {
       black: string;
       white: string;
       main: string;
+      mark: string;
+      line: string;
     };
   }
 }

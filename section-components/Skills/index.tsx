@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
-import Title from '../../components/Title';
+import { Title, StyledTitle } from '../../components/Title';
 
-const StyledSkillsTitle = styled(Title)`
+const StyledSkillsTitle = styled(StyledTitle)`
   margin-top: 40px;
+  margin-bottom: 10px;
 `;
 
 const Skills = () => {

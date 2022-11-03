@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
-import Title from '../../components/Title';
-import List from '../../components/List';
+import { Title } from '../../components/Title';
+import { StyledList } from '../../components/List';
+import Mark from '../../components/Mark';
 
-const StyledWorkList = styled(List)`
+const StyledWorkList = styled(StyledList)`
   margin-top: 50px;
   border-left: 1px solid ${({ theme }) => theme.color.main};
 
@@ -77,16 +78,16 @@ const WorkExperience = () => {
         <React.Fragment key={companyName}>
           <Title heading='h3'>{companyName}.</Title>
           <Title heading='h4'>{position}</Title>
-          <span>{period}</span>
-          <p>{description}</p>
+          <Mark>{period}</Mark>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
 
           <StyledWorkList>
             {projects.map(({ name, period, description, details, techs }) => (
               <li key={name}>
                 <Title heading='h3'>{name}</Title>
-                <span>{period}</span>
+                <Mark>{period}</Mark>
                 <Title heading='h4'>Description</Title>
-                <p>{description}</p>
+                <p dangerouslySetInnerHTML={{ __html: description }} />
                 <Title heading='h4'>What did I do</Title>
                 <ul>
                   {details.map((detail) => (
@@ -96,7 +97,7 @@ const WorkExperience = () => {
                 <Title heading='h4'>Tech Stack</Title>
                 <div>
                   {techs.map((tech) => (
-                    <span key={tech}>{tech}</span>
+                    <Mark key={tech}>{tech}</Mark>
                   ))}
                 </div>
               </li>
