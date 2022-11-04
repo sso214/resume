@@ -1,30 +1,12 @@
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
+import * as S from './style';
 
 interface Props {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
-export const StyledList = styled.ul`
-  li li {
-    position: relative;
-    padding-left: 15px;
-    margin-bottom: 8px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 12px;
-      left: 0;
-
-      display: block;
-      width: 5px;
-      height: 5px;
-      background: ${({ theme }) => theme.color.main};
-    }
-  }
-`;
-
-export const List: React.FC<Props> = ({ children }) => {
-  return <StyledList>{children}</StyledList>;
+const List: React.FC<Props> = ({ children }) => {
+  return <S.List>{children}</S.List>;
 };
+
+export default List;

@@ -6,7 +6,9 @@ declare module 'styled-components' {
       black: string;
       white: string;
       main: string;
+      mainHover: string;
       mark: string;
+      markLine: string;
       line: string;
     };
   }

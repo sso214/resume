@@ -28,10 +28,5 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       white-space: pre-line;
     }
-
-    a {
-      text-decoration: underline;
-      transition: color .2s ease-in-out;
-    }
   }
 `;

@@ -1,12 +1,7 @@
-import styled from 'styled-components';
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
-import { Title, StyledTitle } from '../../components/Title';
-
-const StyledSkillsTitle = styled(StyledTitle)`
-  margin-top: 40px;
-  margin-bottom: 10px;
-`;
+import Title from '../../components/Title';
+import * as S from './style';
 
 const Skills = () => {
   const { skills } = useData();
@@ -17,7 +12,7 @@ const Skills = () => {
       <ul>
         {skills.map(({ title, details }) => (
           <li key={title}>
-            <StyledSkillsTitle heading='h3'>{title}</StyledSkillsTitle>
+            <S.ItemTitle as='h3'>{title}</S.ItemTitle>
             <ol>
               {details.map((detail) => (
                 <li key={detail}>{detail}</li>

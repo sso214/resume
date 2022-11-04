@@ -1,6 +1,6 @@
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
-import { Title } from '../../components/Title';
+import Title from '../../components/Title';
 
 const About = () => {
   const { about } = useData();

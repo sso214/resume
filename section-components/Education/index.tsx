@@ -1,11 +1,12 @@
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
+import Title from '../../components/Title';
 import Mark from '../../components/Mark';
-import { Title } from '../../components/Title';
 
 const Education = () => {
-  const { education } = useData();
-  const { name, major, period, description } = education;
+  const {
+    education: { name, major, period, description },
+  } = useData();
 
   return (
     <Container>

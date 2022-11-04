@@ -1,11 +1,7 @@
-import styled from 'styled-components';
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
-import { Title } from '../../components/Title';
-
-const StyledItem = styled.li`
-  margin-bottom: 10px;
-`;
+import Title from '../../components/Title';
+import * as S from './style';
 
 const Profile = () => {
   const { profile } = useData();
@@ -15,9 +11,9 @@ const Profile = () => {
       <Title heading='h2'>Profile</Title>
       <ol>
         {Object.entries(profile).map(([key, val]) => (
-          <StyledItem key={key}>
+          <S.Item key={key}>
             {key} : {val}
-          </StyledItem>
+          </S.Item>
         ))}
       </ol>
     </Container>

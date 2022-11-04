@@ -1,16 +1,12 @@
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
+import * as S from './style';
 
 interface Props {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
-const StyledContainer = styled.section`
-  margin-bottom: 120px;
-`;
-
 const Container: React.FC<Props> = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>;
+  return <S.Container>{children}</S.Container>;
 };
 
 export default Container;
