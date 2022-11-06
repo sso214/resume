@@ -8,6 +8,6 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: center;
 
-  font-size: 12px;
+  font-size: 0.8em;
   border-top: 1px solid ${({ theme }) => theme.color.line};
 `;

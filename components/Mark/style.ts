@@ -7,6 +7,5 @@ export const Mark = styled.span`
 
   background: ${({ theme }) => theme.color.mark};
   border-radius: 2px;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 0.8em;
 `;

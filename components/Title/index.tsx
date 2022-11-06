@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import * as S from './style';
 
-type HeadingTags = 'h1' | 'h2' | 'h3' | 'h4';
+export type HeadingTags = 'h1' | 'h2' | 'h3' | 'h4';
 
 interface Props {
   heading: HeadingTags;

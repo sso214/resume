@@ -30,7 +30,7 @@ const Career = () => {
                 <Title heading='h4'>What did I do</Title>
                 <ul>
                   {details.map((detail) => (
-                    <li key={detail}>{detail}</li>
+                    <li key={detail} dangerouslySetInnerHTML={{ __html: detail }} />
                   ))}
                 </ul>
 

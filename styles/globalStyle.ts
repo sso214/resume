@@ -14,7 +14,6 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 10px;
     -webkit-text-size-adjust: none;
     font-display: fallback;
     -ms-overflow-style: none;

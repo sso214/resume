@@ -1,6 +1,7 @@
 import useData from '../../hooks/useData';
 import Container from '../../components/Container';
 import Title from '../../components/Title';
+import List from '../../components/List';
 import * as S from './style';
 
 const Skills = () => {
@@ -9,7 +10,7 @@ const Skills = () => {
   return (
     <Container>
       <Title heading='h2'>Skills</Title>
-      <ul>
+      <List>
         {skills.map(({ title, details }) => (
           <li key={title}>
             <S.ItemTitle as='h3'>{title}</S.ItemTitle>
@@ -20,7 +21,7 @@ const Skills = () => {
             </ol>
           </li>
         ))}
-      </ul>
+      </List>
     </Container>
   );
 };

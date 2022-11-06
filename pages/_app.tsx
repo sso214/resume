@@ -7,11 +7,11 @@ import { darkTheme, lightTheme } from '../styles/theme';
 
 const ThemeToggleButton = styled.div<{ isDark: boolean }>`
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 2em;
+  right: 2em;
 
   color: ${({ theme }) => theme.color.white};
-  font-size: 1.5rem;
+  font-size: 1.1em;
   cursor: pointer;
 
   z-index: 100;
